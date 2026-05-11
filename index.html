@@ -418,10 +418,15 @@ form.sent{display:none}
 </head>
 <body>
 <!-- Netlify form detection – NE TÖRÖLD, szükséges a Netlify Forms regisztrációhoz -->
-<form name="kapcsolat" data-netlify="true" hidden aria-hidden="true">
-  <input type="text"   name="nev">
-  <input type="tel"    name="tel">
-  <select name="kor"><option value="gyerek">Gyerek</option><option value="felnott">Felnőtt</option><option value="mindketto">Mindkettő</option></select>
+<form name="kapcsolat" method="POST" data-netlify="true" action="/koszonjuk.html" hidden aria-hidden="true">
+  <input type="hidden" name="form-name" value="kapcsolat">
+  <input type="text" name="nev">
+  <input type="tel" name="tel">
+  <select name="kor">
+    <option value="gyerek">Gyerek</option>
+    <option value="felnott">Felnőtt</option>
+    <option value="mindketto">Mindkettő</option>
+  </select>
 </form>
 
 <!-- STICKY CTA -->
